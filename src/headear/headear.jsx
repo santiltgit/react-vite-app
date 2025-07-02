@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header({ onCartClick }) {
+function Header({ onCartClick, onLoginClick }) {
   return (
     <header className="freak-header">
       <h1 className="freak-header-title">GameFreak Shop</h1>
@@ -25,6 +25,22 @@ function Header({ onCartClick }) {
           <svg width="30" height="30" viewBox="0 0 24 24" fill="#ff00cc">
             <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.83-3.41l1.72-7.45A1 1 0 0 0 19.56 6H6.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 17.37 5.48 19 7 19h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.74-1.04z"/>
           </svg>
+        </button>
+        <button
+          className="login-header-btn"
+          onClick={onLoginClick}
+          style={{
+            background: 'linear-gradient(90deg,#ff00cc,#3333ff)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 6,
+            padding: '0.4em 1.2em',
+            marginLeft: 16,
+            fontWeight: 'bold',
+            cursor: 'pointer'
+          }}
+        >
+          Iniciar sesión
         </button>
       </nav>
     </header>
